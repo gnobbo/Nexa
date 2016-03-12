@@ -55,7 +55,7 @@ class Command: # class for command to be sent to receiver
 	def send(self):  # sends command to receiver
 		for k in range(3): # send command three times (python/os may distort pulse times)
 
-			for j in range(5): # five "burstar" according to protocol
+			for j in range(5): # five "bursts" according to protocol
 				
 				# send synchronization bit
 				GPIO.output(21,1)
@@ -82,10 +82,10 @@ class Command: # class for command to be sent to receiver
 # ----- MAIN PROGRAM -----
 # parse possible input arguments
 parser = argparse.ArgumentParser()
-parser.add_argument("-i", "--id", type=int, default=48234567, help="unikt ID för sändaren")
-parser.add_argument("-u", "--unit", type=int, default=1, choices=[0,1,2], help="enhet att skicka till")
-parser.add_argument("-c", "--command", type=str, default="on", choices=["on","off"], help="kommando (on/off)")
-parser.add_argument("-g", "--group", type=str, default="off", choices=["on","off"], help="gruppkommando (on/off)")
+parser.add_argument("-i", "--id", type=int, default=48234567, help="unique ID for transmitter")
+parser.add_argument("-u", "--unit", type=int, default=1, choices=[0,1,2], help="unit to send to")
+parser.add_argument("-c", "--command", type=str, default="on", choices=["on","off"], help="command (on/off)")
+parser.add_argument("-g", "--group", type=str, default="off", choices=["on","off"], help="group command (on/off)")
 
 args = parser.parse_args()
 
