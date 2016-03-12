@@ -43,7 +43,7 @@ class Command: # class for command to be sent to receiver
 	def encode(self):  # "redundance" coding according to Nexa protocol
 		for i in self.command:
 			if i == 0:
-				self.wire_command += [0,1]  # a "zero" shall be transmittes as "01" according to protocol
+				self.wire_command += [0,1]  # a "zero" shall be transmitted as "01" according to protocol
 			if i == 1:
 				self.wire_command += [1,0]	# a "one shall be transmitted as "10" according to protocol
 
