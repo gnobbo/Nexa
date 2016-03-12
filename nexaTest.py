@@ -45,7 +45,7 @@ class Command: # class for command to be sent to receiver
 			if i == 0:
 				self.wire_command += [0,1]  # a "zero" shall be transmitted as "01" according to protocol
 			if i == 1:
-				self.wire_command += [1,0]	# a "one shall be transmitted as "10" according to protocol
+				self.wire_command += [1,0]  # a "one shall be transmitted as "10" according to protocol
 
 	def delay(self, howlong):  # delay for creating "wire bits" (to transmitter)
 		start = time.time() * 1e6
