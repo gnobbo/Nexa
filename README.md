@@ -1,7 +1,7 @@
 # Nexa
 *Test program for sending commands from Raspberry Pi to Nexa receivers*
 
-Based Joakim Wesslen's excellent [tech blog](http://tech.jolowe.se)
+Based on Joakim Wesslen's excellent [tech blog](http://tech.jolowe.se)
 
 Commands are sent to the transmitter on port 21 on the RPi.
 
